@@ -4,6 +4,11 @@ import './App.css';
 
 class App extends Component {
 
+  constructor() {
+    super()
+    this.onTabChange = this.onTabChange.bind(this)
+  }
+
   onTabChange(event){
     console.log("current context : ", this)
     console.log(event)
