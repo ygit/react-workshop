@@ -19,10 +19,14 @@ class App extends Component {
     console.log("tab selected: ", selectedType)
 
     if (selectedType === "now_showing") {
-        axios.get(nowShowingUrl)
+        axios.get(nowShowingUrl).then(response => {
+          console.log(response)
+        })
     }
-    else if (selectedType == "top_rated") {
-      axios.get(topRatedUrl)
+    else if (selectedType === "top_rated") {
+      axios.get(topRatedUrl).then(response => {
+        console.log(response)
+      })
     }
   }
 
