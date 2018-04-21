@@ -28,7 +28,7 @@ class App extends Component {
           const { data } = response
 
           this.setState({
-            nowShowingList: data,
+            nowShowingList: data.results,
           })
         })
     }
@@ -39,7 +39,7 @@ class App extends Component {
         const { data } = response
 
         this.setState({
-          topRatedList: data,
+          topRatedList: data.results,
         })
       })
     }
