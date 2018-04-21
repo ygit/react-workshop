@@ -13,7 +13,7 @@ class App extends Component {
     super()
 
     this.onTabSelected = this.onTabSelected.bind(this)
-    this.state = { nowShowingList:[], topRatedList: [] }
+    this.state = { nowShowingList: [], topRatedList: [] }
   }
 
   onTabSelected(selectedType) {
@@ -29,6 +29,7 @@ class App extends Component {
 
           this.setState({
             nowShowingList: data.results,
+            selectedType
           })
         })
     }
@@ -40,6 +41,7 @@ class App extends Component {
 
         this.setState({
           topRatedList: data.results,
+          selectedType
         })
       })
     }
