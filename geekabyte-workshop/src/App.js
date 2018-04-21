@@ -5,11 +5,13 @@ import './App.css';
 class App extends Component {
 
   onTabChange(event){
+    console.log("current context : ", this)
     console.log(event)
     console.log("onTabChange invoked")
   }
 
   render() {
+
     return (
       <div className="App">
 
