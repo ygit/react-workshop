@@ -18,6 +18,7 @@ class Tabbar extends Component {
     // setting the state
     const selectedType = event.target.getAttribute("data-type")
     console.log("selected type : ", selectedType)
+
     this.setState({
       selectedType: selectedType
     })
@@ -28,12 +29,28 @@ class Tabbar extends Component {
     const { selectedType } = this.state
     console.log("selectedType : ", selectedType);
 
+
+
     return (
       <div className="Tabbar">
 
         <div>
-          <span data-type="now_showing" className="tab" onClick={this.onTabChange}>Now Showing</span>
-          <span data-type="top_rated" className="tab" onClick={this.onTabChange}>Top Rated</span>
+          <span
+            data-type="now_showing"
+            className={`tab ${selectedType === "now_showing" ? "selected" : ""}`}
+            onClick={this.onTabChange}
+            >
+              Now Showing
+          </span>
+
+          <span
+             data-type="top_rated"
+             className={`tab ${selectedType === "top_rated" ? "selected" : ""}`}
+             onClick={this.onTabChange}
+             >
+              Top Rated
+            </span>
+
         </div>
 
       </div>
