@@ -22,6 +22,8 @@ class Tabbar extends Component {
     this.setState({
       selectedType: selectedType
     })
+
+    this.props.onTabSelected(selectedType)
   }
 
   render() {

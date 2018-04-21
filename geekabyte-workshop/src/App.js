@@ -12,9 +12,9 @@ class App extends Component {
     this.onSelected = this.onTabSelected.bind(this)
   }
 
-  onTabSelected() {
+  onTabSelected(selectedType) {
 
-    console.log("tab selected")
+    console.log("tab selected: ", selectedType)
   }
 
   render() {
