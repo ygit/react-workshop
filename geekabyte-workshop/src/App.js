@@ -17,6 +17,13 @@ class App extends Component {
   onTabSelected(selectedType) {
 
     console.log("tab selected: ", selectedType)
+
+    if (selectedType === "now_playing") {
+        axios.get(nowShowingUrl)
+    }
+    else if (selectedType == "top_rated") {
+      axios.get(topRatedUrl)
+    }
   }
 
   render() {
