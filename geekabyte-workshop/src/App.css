@@ -7,6 +7,11 @@
 	height: 80px;
 }
 
+
+.Tabbar{
+	margin-top: 16px;
+}
+
 .App-header {
 	background-color: #c02c39;
 	color: white;
