@@ -20,12 +20,26 @@ class App extends Component {
 
     if (selectedType === "now_showing") {
         axios.get(nowShowingUrl).then(response => {
+
           console.log(response)
+
+          const { data } = response
+
+          this.setState({
+            nowShowingList: data,
+          })
         })
     }
     else if (selectedType === "top_rated") {
       axios.get(topRatedUrl).then(response => {
         console.log(response)
+
+        const { data } = response
+
+        this.setState({
+          topRatedList: data,
+        })
+
       })
     }
   }
