@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import Tabbar from './Components/movie-island/Tabbar'
 import { nowShowingUrl, topRatedUrl } from './Components/movie-island/apiConfig'
 import axios from 'axios'
+import List from './Components/movie-island/List'
 
 
 class App extends Component {
@@ -45,12 +46,16 @@ class App extends Component {
   }
 
   render() {
+
+    const { selectedType, nowShowingList, topRatedList } = this.state
+
     return (
       <div className="App">
-
         <Header />
 
         <Tabbar onTabSelected={this.onTabSelected} />
+
+        <List data={selectedType === "now_showing" ? nowShowingList : topRatedList} />
 
       </div>
     );
