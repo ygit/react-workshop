@@ -31,8 +31,6 @@ class Tabbar extends Component {
     const { selectedType } = this.state
     console.log("selectedType : ", selectedType);
 
-
-
     return (
       <div className="Tabbar">
 

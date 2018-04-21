@@ -16,6 +16,23 @@ class App extends Component {
     this.state = { nowShowingList: [], topRatedList: [] }
   }
 
+
+  // componentDidMount() {
+  //   console.log('componentDidMount called')
+  //
+  //   axios.get(nowShowingUrl).then(response => {
+  //
+  //     console.log(response)
+  //
+  //     const { data } = response
+  //
+  //     this.setState({
+  //       nowShowingList: data.results,
+  //     })
+  //   })
+  // }
+  //
+
   onTabSelected(selectedType) {
 
     console.log("tab selected: ", selectedType)
@@ -46,6 +63,7 @@ class App extends Component {
       })
     }
   }
+
 
   render() {
 
