@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Components/Header'
 import Tabbar from './Components/movie-island/Tabbar'
+import { nowShowingUrl, topRatedUrl } from './Components/movie-island/apiConfig'
+import axios from 'axios'
 
 
 class App extends Component {
