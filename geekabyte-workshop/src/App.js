@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Tabbar from './movie-island/Tabbar.js'
-// import './movie-island/Tabbar.js'
+import Header from './Components/Header'
+import Tabbar from './Components/movie-island/Tabbar'
 
 
 class App extends Component {
@@ -11,12 +10,9 @@ class App extends Component {
     return (
       <div className="App">
 
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to ReactJS at Of10 by Geekabyte</h1>
-        </header>
+        <Header />
 
-        <Tabbar/>
+        <Tabbar />
 
       </div>
     );
