@@ -27,6 +27,8 @@ class App extends Component {
 
   render() {
 
+    const { selectedType } = this.state
+
     return (
       <div className="App">
 
