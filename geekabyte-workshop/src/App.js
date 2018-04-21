@@ -4,15 +4,25 @@ import './App.css';
 
 class App extends Component {
 
-  // constructor() {
-  //   super()
-  //   // this.onTabChange = this.onTabChange.bind(this)
-  // }
+  constructor() {
+    super()
+    this.onTabChange = this.onTabChange.bind(this)
 
-  onTabChange = event => {
+    // default state
+    this.state = { selectedType: "now_showing" }
+  }
+
+  onTabChange(event) {
     console.log("current context : ", this)
     console.log(event)
     console.log("onTabChange invoked")
+
+    // setting the state
+    const selectedType = event.target.getAttribute("data-type")
+    console.log("selected type : ", selectedType)
+    this.setState({
+      selectedType: selectedType
+    })
   }
 
   render() {
@@ -26,8 +36,8 @@ class App extends Component {
         </header>
 
         <div>
-          <span className="tab" onClick={this.onTabChange}>Now Showing</span>
-          <span className="tab" onClick={this.onTabChange}>Top Rated</span>
+          <span data-type="now_showing" className="tab" onClick={this.onTabChange}>Now Showing</span>
+          <span data-type="top_rated" className="tab" onClick={this.onTabChange}>Top Rated</span>
         </div>
 
       </div>
