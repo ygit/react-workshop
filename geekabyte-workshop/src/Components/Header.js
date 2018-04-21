@@ -10,9 +10,11 @@ class Header extends Component {
 
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to ReactJS at Of10 by Geekabyte</h1>
         </header>
-        
+
       </div>
     );
   }

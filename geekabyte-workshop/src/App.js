@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super()
 
-    this.onSelected = this.onTabSelected.bind(this)
+    this.onTabSelected = this.onTabSelected.bind(this)
+    this.state = { nowShowingList:[], topRatedList: [] }
   }
 
   onTabSelected(selectedType) {
@@ -39,7 +40,6 @@ class App extends Component {
         this.setState({
           topRatedList: data,
         })
-
       })
     }
   }
